@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinkerblox</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/custom.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    
+    
+    <!-- <app-bar id="app-bar" data-css="app-section"></app-bar> -->
+    <div class="container mt-5">
+        <!-- <parent-node item="title" id="parent"></parent-node> -->
+        <h3 class="mb-3">List Item</h3>
+        <add-form id="add-form"></add-form>
+        <!-- <list-item id="item-elm"></list-item> -->
+        <count-node id="countItem"></count-node>
+        <list-item id="listitem"></list-item>
+        <!-- <div class="js-items"></div> -->
+        <!-- <app-button variant="primary" color="primary" method='{"fName": "myFun", "fArg": ["test", "test2"], "fEvent":"click"}' >Save</app-button> -->
+        <app-button variant="primary" color="primary" method='{"fName": "test", "fArg": [1,2], "fEvent": "click"}'>Add</app-button>
+        <app-button variant="primary" color="primary" onclick="myFun()">Add Toast</app-button>
+        <app-toast ref="mytoast" class="toast-container" data-position="top-right" id="toast1"></app-toast>
+        <app-table ref="table1" tbsn="true" classname="mt-5" thead="Title, Description, Note"></app-table>
+    </div>
+
+
+<!-- <script type="module" src="./js/webcomponents.js"></script>
+<script type="module" src="./js/parentcomponent.js"></script> -->
+<script type="module" src="./js/web-components.js"></script>
+<!-- <script type="module" src="./js/components/contextAPI.js"></script> -->
+<script type="module">
+    import { state, actions, mutations } from "./js/model.js";
+    import Store from "./js/store/store.js";
+    const addFrom = document.getElementById("add-form");
+    const listItem = document.getElementById("listitem");
+    const countItem = document.getElementById("countItem");
+    const store = new Store({state, actions, mutations})
+ 
+    addFrom.setrStore = store;
+    listItem.setrStore = store;
+    countItem.setrStore = store;
+</script>
+<script>
+   
+    let count = 0;
+    function myFun(){
+        count++;
+        mytoast.createToast({
+            text: "Toast message "+count, 
+            autoClose: 3000,
+            showProgress: true
+        });
+    }
+
+    function test(a, b){
+        alert(a, b)
+    }
+
+    (function(){
+        let newTableItem = [
+            ["Item 1", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu eleifend metus. ", "Null"],
+            ["Item 2", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu eleifend metus. ", "Null"],
+            ["Item 3", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu eleifend metus. ", "Null"]
+        ]
+        table1.setTableContent(newTableItem);
+    })();
+    
+</script>
+</body>
+</html>

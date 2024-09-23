@@ -1,0 +1,876 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ----------------------------------------------------------------------
+reuse variables --------------------------------------------------------*/
+:root{
+    --primary-color:#2196F3;
+    --secondary-color: orange;
+}
+
+/* ------------------------------------------------------------------------
+Reset style ---------------------------------------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* -------------------------------------------------------
+Container -----------------------------------------------*/
+.container{
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* -------------------------------------------------------
+row & colum ---------------------------------------------*/
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.row>*{
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col{
+    flex: 1 0 0%;
+}
+.col-1 {
+    flex: 0 0 auto;
+    width: 8.33333333%;
+}
+.col-2 {
+    flex: 0 0 auto;
+    width: 16.66666667%;
+}
+.col-3 {
+    flex: 0 0 auto;
+    width: 25%;
+}
+.col-4 {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+}
+.col-5 {
+    flex: 0 0 auto;
+    width: 41.66666667%;
+}
+.col-6 {
+    flex: 0 0 auto;
+    width: 50%;
+}
+.col-7 {
+    flex: 0 0 auto;
+    width: 58.33333333%;
+}
+.col-8 {
+    flex: 0 0 auto;
+    width: 66.66666667%;
+}
+.col-9 {
+    flex: 0 0 auto;
+    width: 75%;
+}
+.col-10 {
+    flex: 0 0 auto;
+    width: 83.33333333%;
+}
+.col-11 {
+    flex: 0 0 auto;
+    width: 91.66666667%;
+}
+.col-12 {
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+/* Mobile device -------*/
+@media (min-width: 576px){
+    .container{
+        width: 540px;
+    }
+    .col-sm-1 {
+        flex: 0 0 auto;
+        width: 8.33333333%;
+    }
+    .col-sm-2 {
+        flex: 0 0 auto;
+        width: 16.66666667%;
+    }
+    .col-sm-3 {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+    .col-sm-4 {
+        flex: 0 0 auto;
+        width: 33.33333333%;
+    }
+    .col-sm-5 {
+        flex: 0 0 auto;
+        width: 41.66666667%;
+    }
+    .col-sm-6 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+    .col-sm-7 {
+        flex: 0 0 auto;
+        width: 58.33333333%;
+    }
+    .col-sm-8 {
+        flex: 0 0 auto;
+        width: 66.66666667%;
+    }
+    .col-sm-9 {
+        flex: 0 0 auto;
+        width: 75%;
+    }
+    .col-sm-10 {
+        flex: 0 0 auto;
+        width: 83.33333333%;
+    }
+    .col-sm-11 {
+        flex: 0 0 auto;
+        width: 91.66666667%;
+    }
+    .col-sm-12 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}
+/* Tab device -------*/
+@media (min-width: 768px){
+    .container{
+        width: 720px;
+    }
+    .col-md-1 {
+        flex: 0 0 auto;
+        width: 8.33333333%;
+    }
+    .col-md-2 {
+        flex: 0 0 auto;
+        width: 16.66666667%;
+    }
+    .col-md-3 {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+    .col-md-4 {
+        flex: 0 0 auto;
+        width: 33.33333333%;
+    }
+    .col-md-5 {
+        flex: 0 0 auto;
+        width: 41.66666667%;
+    }
+    .col-md-6 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+    .col-md-7 {
+        flex: 0 0 auto;
+        width: 58.33333333%;
+    }
+    .col-md-8 {
+        flex: 0 0 auto;
+        width: 66.66666667%;
+    }
+    .col-md-9 {
+        flex: 0 0 auto;
+        width: 75%;
+    }
+    .col-md-10 {
+        flex: 0 0 auto;
+        width: 83.33333333%;
+    }
+    .col-md-11 {
+        flex: 0 0 auto;
+        width: 91.66666667%;
+    }
+    .col-md-12 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}
+/* medium device -------*/
+@media (min-width: 992px){
+    .container{
+        width: 960px;
+    }
+    .col-lg-1 {
+        flex: 0 0 auto;
+        width: 8.33333333%;
+    }
+    .col-lg-2 {
+        flex: 0 0 auto;
+        width: 16.66666667%;
+    }
+    .col-lg-3 {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+    .col-lg-4 {
+        flex: 0 0 auto;
+        width: 33.33333333%;
+    }
+    .col-lg-5 {
+        flex: 0 0 auto;
+        width: 41.66666667%;
+    }
+    .col-lg-6 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+    .col-lg-7 {
+        flex: 0 0 auto;
+        width: 58.33333333%;
+    }
+    .col-lg-8 {
+        flex: 0 0 auto;
+        width: 66.66666667%;
+    }
+    .col-lg-9 {
+        flex: 0 0 auto;
+        width: 75%;
+    }
+    .col-lg-10 {
+        flex: 0 0 auto;
+        width: 83.33333333%;
+    }
+    .col-lg-11 {
+        flex: 0 0 auto;
+        width: 91.66666667%;
+    }
+    .col-lg-12 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}
+/* Tab device -------*/
+@media (min-width: 1200px){
+    .container{
+        width: 1140px;
+    }
+    .col-xl-1 {
+        flex: 0 0 auto;
+        width: 8.33333333%;
+    }
+    .col-xl-2 {
+        flex: 0 0 auto;
+        width: 16.66666667%;
+    }
+    .col-xl-3 {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+    .col-xl-4 {
+        flex: 0 0 auto;
+        width: 33.33333333%;
+    }
+    .col-xl-5 {
+        flex: 0 0 auto;
+        width: 41.66666667%;
+    }
+    .col-xl-6 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+    .col-xl-7 {
+        flex: 0 0 auto;
+        width: 58.33333333%;
+    }
+    .col-xl-8 {
+        flex: 0 0 auto;
+        width: 66.66666667%;
+    }
+    .col-xl-9 {
+        flex: 0 0 auto;
+        width: 75%;
+    }
+    .col-xl-10 {
+        flex: 0 0 auto;
+        width: 83.33333333%;
+    }
+    .col-xl-11 {
+        flex: 0 0 auto;
+        width: 91.66666667%;
+    }
+    .col-xl-12 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}
+/* Tab device -------*/
+@media (min-width: 1400px){
+    .container{
+        width: 1320px;
+    }
+    .col-xxl-1 {
+        flex: 0 0 auto;
+        width: 8.33333333%;
+    }
+    .col-xxl-2 {
+        flex: 0 0 auto;
+        width: 16.66666667%;
+    }
+    .col-xxl-3 {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+    .col-xxl-4 {
+        flex: 0 0 auto;
+        width: 33.33333333%;
+    }
+    .col-xxl-5 {
+        flex: 0 0 auto;
+        width: 41.66666667%;
+    }
+    .col-xxl-6 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+    .col-xxl-7 {
+        flex: 0 0 auto;
+        width: 58.33333333%;
+    }
+    .col-xxl-8 {
+        flex: 0 0 auto;
+        width: 66.66666667%;
+    }
+    .col-xxl-9 {
+        flex: 0 0 auto;
+        width: 75%;
+    }
+    .col-xxl-10 {
+        flex: 0 0 auto;
+        width: 83.33333333%;
+    }
+    .col-xxl-11 {
+        flex: 0 0 auto;
+        width: 91.66666667%;
+    }
+    .col-xxl-12 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}
+
+/*--------------------------------------------------------
+utilities -----------------------------------------------*/
+/* layout style --*/
+.d-flex{
+    display: flex !important;
+}
+.d-inline-flex{
+    display: inline-flex !important;
+}
+.justify-content-center{
+    justify-content: center !important;
+}
+.justify-content-start{
+    justify-content: flex-start !important;
+}
+.justify-content-end{
+    justify-content: flex-end !important;
+}
+.justify-space-around{
+    justify-content: space-around !important;
+}
+.justify-space-between{
+    justify-content: space-between !important;
+}
+.justify-space-evenly{
+    justify-content: space-evenly !important;
+}
+.align-items-center{
+    align-items: center !important;
+}
+.align-items-start{
+    align-items: flex-start !important;
+}
+.align-items-end{
+    align-items: flex-end !important;
+}
+.align-items-stretch{
+    align-items: stretch !important;
+}
+.flex-dr-clm{
+    flex-direction: column !important;
+}
+.flex-dr-clm-rs{
+    flex-direction: column-reverse !important;
+}
+.flex-dr-rw{
+    flex-direction: row !important;
+}
+.flex-dr-rw-rs{
+    flex-direction: row-reverse !important;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+.flex-nowrap{
+    flex-wrap: nowrap;
+}
+.flex-wrap-rs{
+    flex-wrap: wrap-reverse;
+}
+
+.d-block{
+    display: block !important;
+}
+.d-inline-block{
+    display: inline-block !important;
+}
+.d-inline{
+    display: inline !important;
+}
+.d-none{
+    display: none !important;
+}
+
+/* position */
+.pos-relative{
+    position: relative !important;
+}
+.pos-absolute{
+    position: absolute !important;
+}
+.pos-fixed{
+    position: fixed !important;
+}
+.pos-static{
+    position: static !important;
+}
+.tp-0{
+    top: 0 !important;
+}
+.tp-10{
+    top: 10px !important;
+}
+.tp-20{
+    top: 20px !important;
+}
+.tp-30{
+    top: 30px !important;
+}
+.tp-40{
+    top: 40px !important;
+}
+.tp-50{
+    top: 50px !important;
+}
+
+.rt-0{
+    right: 0 !important;
+}
+.rt-10{
+    right: 10px !important;
+}
+.rt-20{
+    right: 20px !important;
+}
+.rt-30{
+    right: 30px !important;
+}
+.rt-40{
+    right: 40px !important;
+}
+.rt-50{
+    right: 50px !important;
+}
+
+.btm-0{
+    bottom: 0 !important;
+}
+.btm-10{
+    bottom: 10px !important;
+}
+.btm-20{
+    bottom: 20px !important;
+}
+.btm-30{
+    bottom: 30px !important;
+}
+.btm-40{
+    bottom: 40px !important;
+}
+.btm-50{
+    bottom: 50px !important;
+}
+
+.lt-0{
+    left: 0 !important;
+}
+.lt-10{
+    left: 10px !important;
+}
+.lt-20{
+    left: 20px !important;
+}
+.lt-30{
+    left: 30px !important;
+}
+.lt-40{
+    left: 40px !important;
+}
+.lt-50{
+    left: 50px !important;
+}
+
+/*--------------------------------------------------
+Sapcing --------------------------------------------*/
+.m-0{
+    margin: 0 !important;
+}
+.mt-0{
+    margin-top: 0 !important;
+}
+.mt-1{
+    margin-top: .25rem !important;
+}
+.mt-2{
+    margin-top: .5rem !important;
+}
+.mt-3{
+    margin-top: 1rem !important;
+}
+.mt-4{
+    margin-top: 1.5rem !important;
+}
+.mt-5{
+    margin-top: 3rem !important;
+}
+.mr-0{
+    margin-right: 0 !important;
+}
+.mr-1{
+    margin-right: .25rem !important;
+}
+.mr-2{
+    margin-right: .5rem !important;
+}
+.mr-3{
+    margin-right: 1rem !important;
+}
+.mr-4{
+    margin-right: 1.5rem !important;
+}
+.mr-5{
+    margin-right: 3rem !important;
+}
+
+.mb-0{
+    margin-bottom: 0 !important;
+}
+.mb-1{
+    margin-bottom: .25rem !important;
+}
+.mb-2{
+    margin-bottom: .5rem !important;
+}
+.mb-3{
+    margin-bottom: 1rem !important;
+}
+.mb-4{
+    margin-bottom: 1.5rem !important;
+}
+.mb-5{
+    margin-bottom: 3rem !important;
+}
+
+.ml-0{
+    margin-left: 0 !important;
+}
+.ml-1{
+    margin-left: .25rem !important;
+}
+.ml-2{
+    margin-left: .5rem !important;
+}
+.ml-3{
+    margin-left: 1rem !important;
+}
+.ml-4{
+    margin-left: 1.5rem !important;
+}
+.ml-5{
+    margin-left: 3rem !important;
+}
+
+/* --------------------------------------
+App bar -----------------------------------*/
+.app-bar-container{
+    background-color: #ccc;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 0 3rem;
+}
+.app-bar{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px 0;
+}
+.app-link{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    text-decoration: none;
+}
+.app-icon > i{
+    color: #777;
+    font-size: 1.3rem;
+}
+.app-text{
+    font-size: 1rem;
+    color: #777;
+    text-transform: capitalize;
+}
+
+/*-----------------------------------------
+card -------------------------------------*/
+.card{
+    border:solid 1px #ccc;
+    padding: 20px;   
+    border-radius: 5px;
+}
+.card-body h5{
+    font-size: 1.25rem;
+}
+.gp-1{
+    gap: 0 1rem;
+}
+
+
+/*--------------------------------------
+Buttons --------------------------------*/
+.btn, .btn-primary{
+    display: inline-block;
+    border-radius: 5px;
+    padding: .5rem 1.5rem;
+    background-color: transparent;
+    border:solid 1px transparent;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 1px -2px, rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
+}
+.btn:focus{
+    outline: none;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+.btn-primary:active {
+    color: #fff;
+    background-color: #0a58ca;
+    border-color: #0a53be;
+}
+
+
+.btn-delete {
+    color: #fff;
+    background-color: #fd0d0d;
+    border-color: #fd0d0d;
+}
+.btn-delete:hover {
+    color: #fff;
+    background-color: #f21212;
+    border-color: #f21212;
+}
+.btn-delete:active {
+    color: #fff;
+    background-color: #f90404;
+    border-color: #f90404;
+}
+
+.btn-radius{
+    border-radius: 25px !important;
+}
+.btn-circle{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50% !important;
+    font-size: 20px;
+}
+.btn:disabled{
+    background-color: #ccc;
+    border-color: #ccc;
+    color: #000;
+    cursor:not-allowed
+}
+
+
+/*-------------------------------------------
+Toast ---------------------------------------*/
+.toast-container{
+    position: fixed;
+    
+}
+.toast-content{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.toast{
+    display: flex;
+    position: relative;
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    padding: 1rem;
+    background-color: #fff;
+    width: 250px;
+    transition: all .2s ease-in-out;
+    overflow: hidden;
+}
+.toast-container[data-position$='-right'] .toast{
+    transform: translateX(110%);
+}
+.toast-container[data-position$='-left'] .toast{
+    transform: translateX(-110%);
+}
+
+.toast-container .toast.show{
+    transform: translateX(0);
+}
+.toast.progress:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: calc(100% * var(--progress));
+    height: 3px;
+    background-color: #0a58ca;
+}
+.toast.can-close:after{
+    content: "\00D7";
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 18px;
+}
+.toast-container[data-position^='top-']{
+    top: 5px;
+}
+.toast-container[data-position^='bottom-']{
+    bottom: 5px;
+}
+.toast-container[data-position$='-left']{
+    left: 5px;
+}
+.toast-container[data-position$='-right']{
+    right: 5px;
+}
+.toast-container[data-position$='-center']{
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/*---------------------------------------------
+Forms -----------------------------------------*/
+.form-control{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border:solid 1px #ccc;
+    padding: .65rem 1rem;
+    font-size: .85rem;
+    color: #777;
+}
+.form-control:focus{
+    outline: 0;
+    border-color: #999;
+}
+
+
+/*--------------------------------------------------
+Table ------------------------------------------*/
+.tb-table, th, td{
+    border:solid 1px #ccc;
+    border-collapse: collapse;
+}
+.tb-table{
+    width: 100%;
+}
+.tb-table th, .tb-table td{
+    padding: .8rem .8rem;
+    font-size: 1rem;
+    background-color: #fff;
+}
+.tb-table th{
+    background-color: #009688;
+    color: #fff;
+    border-color: #068579;
+    text-align: left;
+    font-weight: 600;
+}

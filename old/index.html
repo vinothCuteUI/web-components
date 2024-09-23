@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web component</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css" >
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h2>Web components</h2>
+        <heading-elm color="red" text="" class="text-center flex">
+            This Heading text 1
+        </heading-elm>
+        <heading-elm  color="blue" text="">
+            This Heading text 2
+        </heading-elm>
+
+        <checkbox-elm checked="true">
+            Text 1
+            <span slot="detail">Sample text</span>
+        </checkbox-elm>
+
+
+        <ul is="expanded-list" data-expand="true">
+            <li>First</li>
+            <li>Second</li>
+            <ul is="expanded-list" data-expand="false">
+                <li>First</li>
+                <li>Second</li>
+            </ul>
+        </ul>
+
+        <!-- <div class="app-bar-container" id="appbar">
+    </div> -->
+    </div>
+    
+    
+
+<!-- <script src="./appbar.js"></script> -->
+<script src="./webcomponents.js"></script>
+<script src="./expandList.js"></script>
+</body>
+</html>

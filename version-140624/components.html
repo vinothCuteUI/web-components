@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/custom.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+     <div class="wrapper">
+        <!--Side navbar ----------------------------------------->
+        <div class="sidebar">
+            <div class="logo-container">
+                <h1>
+                    <a href="#" class="logo">
+                        <img src="./assets/images/logo.png" alt="Tinkerblox">
+                    </a>
+                </h1>
+            </div>
+            <div class="sidebar-nav">
+                <h3>Components</h3>
+                <div class="tab-item">
+                    <a href="#" data-id="tab-table" class="tab-link sidenav-link active">Table</a>
+                    <a href="#" data-id="tab-header" class="tab-link sidenav-link" >Header Navigation</a>
+                    <a href="#" data-id="tab-appBar" class="tab-link sidenav-link">App Bar (TRBL)</a>
+                    <a href="#" data-id="tab-portal" class="tab-link sidenav-link">Portal (Modal)</a>
+                    <a href="#" data-id="tab-input" class="tab-link sidenav-link">Input Boxes</a>
+                    <a href="#" data-id="tab-wizard" class="tab-link sidenav-link">Wizard</a>
+                    <a href="#" data-id="tab-widgets" class="tab-link sidenav-link">Widgets</a>
+                    <a href="#" data-id="tab-dragDrop" class="tab-link sidenav-link">Containers with Drag and Drop Children</a>
+                    <a href="#" data-id="tab-hierarchy" class="tab-link sidenav-link">Hierarchy</a>
+                    <a href="#" data-id="tab-buttons" class="tab-link sidenav-link">Buttons</a>
+                    <a href="#" data-id="tab-forms" class="tab-link sidenav-link">Forms</a>
+                    <a href="#" data-id="tab-alerts" class="tab-link sidenav-link">Alerts</a>
+                    <a href="#" data-id="tab-dialogs" class="tab-link sidenav-link">Dialogs</a>
+                    <a href="#" data-id="tab-date" class="tab-link sidenav-link">Date Picker</a>
+                    <a href="#" data-id="tab-loaders" class="tab-link sidenav-link">Loaders</a>
+                    <a href="#" data-id="tab-utilities" class="tab-link sidenav-link">Utilities</a>
+                </div>
+
+            </div>
+        </div>
+        <!--Side navbar end----------------------------------------->
+        <div class="page-container">
+            <div class="tab-container">
+                <div class="tab-content active" id="tab-table">
+                    <div class="page-title">
+                        <h2>Table Component</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at magna velit. Nunc fringilla faucibus ullamcorper. Aenean vehicula rutrum nunc id ullamcorper. Maecenas bibendum tincidunt placerat.</p>
+
+                        <div class="component-view">
+                            <h4>Output</h4>
+                            <div class="sample-view">
+                                <app-table ref="table1" tbsn="true" class="mt-0" thead="Title, Description, Note"></app-table>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content" id="tab-header">
+                    <div class="page-title">
+                        <h2>Header Component</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at magna velit. Nunc fringilla faucibus ullamcorper. Aenean vehicula rutrum nunc id ullamcorper. Maecenas bibendum tincidunt placerat.</p>
+                    </div>
+                </div>
+                <div class="tab-content" id="tab-appBar">
+                    <div class="page-title">
+                        <h2>App Bar Component</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at magna velit. Nunc fringilla faucibus ullamcorper. Aenean vehicula rutrum nunc id ullamcorper. Maecenas bibendum tincidunt placerat.</p>
+
+                        <div class="component-view">
+                            <h4>Output</h4>
+                            <div class="sample-view">
+                                <app-bar ref="appbar" classname="app-section"></app-bar>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content" id="tab-portal">
+                    <div class="page-title">
+                        <h2>Portal (Modal) with Overlay Component</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at magna velit. Nunc fringilla faucibus ullamcorper. Aenean vehicula rutrum nunc id ullamcorper. Maecenas bibendum tincidunt placerat.</p>
+                    </div>
+                </div>
+                <div class="tab-content" id="tab-input">
+                    <div class="page-title">
+                        <h2>Input Boxes Component</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at magna velit. Nunc fringilla faucibus ullamcorper. Aenean vehicula rutrum nunc id ullamcorper. Maecenas bibendum tincidunt placerat.</p>
+                    </div>
+                </div>
+                <div class="tab-content" id="tab-wizard">
+                    <div class="page-title">
+                        <h2>Wizard Component</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at magna velit. Nunc fringilla faucibus ullamcorper. Aenean vehicula rutrum nunc id ullamcorper. Maecenas bibendum tincidunt placerat.</p>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="tab-widgets">
+                    <div class="page-title">
+                        <h2>Widgets with Config Options & Transitions (Adaptive) Component</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at magna velit. Nunc fringilla faucibus ullamcorper. Aenean vehicula rutrum nunc id ullamcorper. Maecenas bibendum tincidunt placerat.</p>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="tab-dragDrop">
+                    <div class="page-title">
+                        <h2>Containers with Drag and Drop Children Component</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at magna velit. Nunc fringilla faucibus ullamcorper. Aenean vehicula rutrum nunc id ullamcorper. Maecenas bibendum tincidunt placerat.</p>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="tab-hierarchy">
+                    <div class="page-title">
+                        <h2>Hierarchy (Custom with Data Type) Component</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at magna velit. Nunc fringilla faucibus ullamcorper. Aenean vehicula rutrum nunc id ullamcorper. Maecenas bibendum tincidunt placerat.</p>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="tab-buttons">
+                    <div class="page-title">
+                        <h2>Buttons Component</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at magna velit. Nunc fringilla faucibus ullamcorper. Aenean vehicula rutrum nunc id ullamcorper. Maecenas bibendum tincidunt placerat.</p>
+
+                        <div class="component-view">
+                            <h4>Output</h4>
+                            <div class="sample-view" style="padding: 20px;">
+                                <app-button variant="primary" color="primary" method='{"fName": "test", "fArg": [1,2], "fEvent": "click"}'>Submit</app-button>
+                                <app-button variant="radius" color="primary" method='{"fName": "test", "fArg": [1,2], "fEvent": "click"}'>Submit</app-button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="tab-forms">
+                    <div class="page-title">
+                        <h2>Forms Component</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at magna velit. Nunc fringilla faucibus ullamcorper. Aenean vehicula rutrum nunc id ullamcorper. Maecenas bibendum tincidunt placerat.</p>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="tab-alerts">
+                    <div class="page-title">
+                        <h2>Alerts Component</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at magna velit. Nunc fringilla faucibus ullamcorper. Aenean vehicula rutrum nunc id ullamcorper. Maecenas bibendum tincidunt placerat.</p>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="tab-dialogs">
+                    <div class="page-title">
+                        <h2>Dialogs Component</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at magna velit. Nunc fringilla faucibus ullamcorper. Aenean vehicula rutrum nunc id ullamcorper. Maecenas bibendum tincidunt placerat.</p>
+                    </div>
+                </div>
+               
+                <div class="tab-content" id="tab-date">
+                    <div class="page-title">
+                        <h2>Date Picker Component</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at magna velit. Nunc fringilla faucibus ullamcorper. Aenean vehicula rutrum nunc id ullamcorper. Maecenas bibendum tincidunt placerat.</p>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="tab-loaders">
+                    <div class="page-title">
+                        <h2>Loaders Picker Component</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at magna velit. Nunc fringilla faucibus ullamcorper. Aenean vehicula rutrum nunc id ullamcorper. Maecenas bibendum tincidunt placerat.</p>
+                    </div>
+                </div>
+                <div class="tab-content" id="tab-utilities">
+                    <div class="page-title">
+                        <h2>Utilities Picker Component</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at magna velit. Nunc fringilla faucibus ullamcorper. Aenean vehicula rutrum nunc id ullamcorper. Maecenas bibendum tincidunt placerat.</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+<!-- <script type="module" src="./js/web-components.js"></script> -->
+<script src="./js/components/table.js"></script>
+<script src="./js/components/appbar.js"></script>
+<script src="./js/components/button.js"></script>
+<script>
+
+    (function(){
+        //Table
+        let newTableItem = [
+            ["Item 1", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu eleifend metus. ", "Null"],
+            ["Item 2", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu eleifend metus. ", "Null"],
+            ["Item 3", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu eleifend metus. ", "Null"]
+        ]
+        table1.setTableContent(newTableItem);
+
+
+        //App bar
+        let appArr = [
+            {
+                id:1,
+                title: "Configurator",
+                icon: "fa-phone",
+                url: "https://app-tinkerblox-dev.azurewebsites.net/Visualizer"
+            },
+            {
+                id:2,
+                title: "Visualizer",
+                icon: "fa-desktop",
+                url: "https://app-tinkerblox-dev.azurewebsites.net/Visualizer"
+            },
+            {
+                id:3,
+                title: "Diagnoser",
+                icon: "fa-hourglass",
+                url: "https://app-tinkerblox-dev.azurewebsites.net/Visualizer"
+            },
+            {
+                id:4,
+                title: "Subscriber",
+                icon: "fa-comments",
+                url: "https://app-tinkerblox-dev.azurewebsites.net/Visualizer"
+            },
+            {
+                id:5,
+                title: "Simulator",
+                icon: "fa-mobile",
+                url: "https://app-tinkerblox-dev.azurewebsites.net/Visualizer",
+            },
+            {
+                id:6,
+                title: "Moderator",
+                icon: "fa-print",
+                url: "https://app-tinkerblox-dev.azurewebsites.net/Visualizer",
+            }
+
+            
+        ]
+        appbar.appBarData(appArr);
+    })();
+</script>
+<script>
+    let tabLink = document.getElementsByClassName("tab-link");
+    let tabContent = document.getElementsByClassName("tab-content");
+    var doc = document.documentElement;
+    for(let i = 0; i < tabLink.length; i++){
+        tabLink[i].addEventListener("click", (e)=>{
+            e.preventDefault();
+            let tabId = e.target.dataset["id"];
+            
+            for(let j = 0; j < tabContent.length; j++){
+                if(tabId == tabContent[j].getAttribute("id")){
+                    const sectionTop = tabContent[j].offsetTop;
+                    console.log("Target Elm ", sectionTop)
+                    console.log("Window ", window.scrollY)
+                    window.scrollTo({
+                        top: sectionTop-30,
+                        behavior: "smooth"
+                    });
+                }
+            }
+        })
+    }
+    window.addEventListener("scroll", (e)=>{
+        
+        let curnt = ""
+        for(let j = 0; j < tabContent.length; j++){
+            if((pageYOffset+40) >= (tabContent[j].offsetTop)){
+                curnt = tabContent[j].getAttribute("id");
+            }
+        }
+
+        for(let i = 0; i < tabLink.length; i++){
+            if(tabLink[i].dataset.id == curnt){
+                tabLink[i].classList.add("active")
+            }else{
+                tabLink[i].classList.remove("active")
+            }
+        }
+    })
+  
+</script>
+</body>
+</html>
